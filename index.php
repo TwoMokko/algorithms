@@ -61,6 +61,11 @@ class Matrices {
 		$result = [];
 
 		/*сложение*/
+		foreach ($array1 as $i => $item1) {
+			foreach ($item1 as $j => $elem1) {
+				$result[$i][$j] = $elem1 + $array2[$i][$j];
+			}
+		}
 
 		return $result;
 	}
@@ -72,11 +77,12 @@ class Matrices {
 		foreach ($array1 as $item1) if ($count_item1 !== count($item1)) return false;
 		foreach ($array2 as $item2) if ($count_item2 !== count($item2)) return false;
 
-		if (count($array1) !== $count_item2 && count($array2) !== $count_item1) return false;
+		if (count($array2) !== $count_item1) return false;
 
 		$result = [];
 
 		/*умножение*/
+
 
 		return $result;
 	}
