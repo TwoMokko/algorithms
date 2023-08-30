@@ -82,6 +82,14 @@ class Matrices {
 		$result = [];
 
 		/*умножение*/
+		for ($n = 0; $n < count($array2[0]); $n++) {
+			for ($m = 0; $m < count($array1); $m++) {
+				$result[$m][$n] = 0;
+				for ($l = 0; $l < count($array2); $l++) {
+					$result[$m][$n] += $array1[$m][$l] * $array2[$l][$n];
+				}
+			}
+		}
 
 
 		return $result;
@@ -104,8 +112,8 @@ $array3 = [
 	[3, 6],
 ];
 $array4 = [
-	[1, 2, 5],
-	[2, 4, 1],
+	[1, 2, 5, 2, 2],
+	[2, 4, 1, 1, 3],
 ];
 
 var_dump(Matrices::Sum($array1, $array2));
